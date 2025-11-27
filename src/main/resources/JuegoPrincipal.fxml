@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controlador.GameController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="800.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" spacing="50.0">
+                    <children>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <Label text="Puntuación X" />
+                                <Label fx:id="lblPuntuacionX" text="0" textFill="#005a8d">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <Label text="Turno de:" />
+                                <Label fx:id="lblTurno" text="JUGADOR X" textFill="#005a8d">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <Label text="Puntuación O" />
+                                <Label fx:id="lblPuntuacionO" text="0" textFill="#8d0000">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #ffffff; -fx-padding: 20; -fx-border-color: #cccccc; -fx-border-radius: 5;">
+                    <children>
+                        <Label text="Resuelve la Operación para Jugar:" />
+                        <Label fx:id="lblPregunta" text="OP1 + OP2 = ?" textFill="#333333">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <Button fx:id="btnOpcion1" onAction="#handleRespuesta" prefHeight="40.0" prefWidth="80.0" text="?" />
+                                <Button fx:id="btnOpcion2" onAction="#handleRespuesta" prefHeight="40.0" prefWidth="80.0" text="?" />
+                                <Button fx:id="btnOpcion3" onAction="#handleRespuesta" prefHeight="40.0" prefWidth="80.0" text="?" />
+                                <Button fx:id="btnOpcion4" onAction="#handleRespuesta" prefHeight="40.0" prefWidth="80.0" text="?" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                    </VBox.margin>
+                </VBox>
+                <GridPane fx:id="gridTablero" alignment="CENTER" style="-fx-background-color: #cccccc;" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="200.0" right="200.0" top="10.0" />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </GridPane>
+                <Button fx:id="btnMenuPrincipal" onAction="#handleVolverMenuPrincipal" text="Volver al Menú Principal" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

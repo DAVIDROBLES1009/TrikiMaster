@@ -6,7 +6,7 @@
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
     <option name="OTHER_OPTIONS" value="-encoding utf8 -charset utf8" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="24" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
